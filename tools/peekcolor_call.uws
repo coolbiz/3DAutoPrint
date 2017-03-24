@@ -1,0 +1,15 @@
+CALL .\80_Func.uws()
+
+x1=590
+x2=610
+y1=280
+y2=305
+
+
+r=57
+g=212
+b=255
+
+Position=ColorPosition(x1,x2,y1,y2,r,g,b)
+
+PRINT "X="+Position[0]+"/Y="+Position[1]

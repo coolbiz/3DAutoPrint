@@ -1,0 +1,64 @@
+xx=602
+yy=298
+
+MMV(xx, yy, 100)
+
+sleep(3)
+//　カーソル位置の色を表示
+
+x = G_MOUSE_X; y = G_MOUSE_Y
+
+c = PeekColor(x, y, COL_RGB)
+
+PRINT "赤="+G_赤(c)+",緑="+G_緑(c)+",青="+G_青(c)
+
+x1=xx-10
+x2=xx+10
+y1=yy-10
+y2=yy+10
+
+r=G_赤(c)
+g=G_緑(c)
+b=G_青(c)
+
+bx=0
+by=0
+sx=x2+100
+sy=y2+100
+
+z=2
+
+
+PRINT "serch_zone:X="+x1+":"+x2+"/Y="+y1+":"+y2
+
+for x=x1to x2 step 2
+   for y=y1 to y2 step 2
+     MMV(x, y, 1)
+     c= PeekColor( x, y, COL_RGB)
+     if ( G_赤(c)>=(r-z) and G_赤(c)<=(r+z) ) and ( G_緑(c)>=(g-z) and G_緑(c)<=(g+z) ) and ( G_青(c)>=(b-z) and G_青(c)<=(b+z) ) then
+         if x>bx then bx=x
+         if x<sx then sx=x
+         if y>by then by=y
+         if y<sy then sy=y
+     endif
+   next
+next
+
+PRINT "get_zone:X="+sx+":"+bx+"/Y="+sy+":"+by
+
+if bx<=0 and sx>=x2+100 then gx=int((x2+x1)/2) else gx=int((bx+sx)/2)
+if by<=0 and sy>=y2+100 then gy=int((y2+y1)/2) else gy=int((by+sy)/2)
+
+PRINT "X="+gx+"/Y="+gy
+
+
+//　以下　関数
+function G_赤(c)
+　　Result = c and $FF
+fend
+function G_緑(c)
+　　Result = (c and $FF00) / $100
+fend
+function G_青(c)
+　　Result = (c and $FF0000) / $10000
+fend

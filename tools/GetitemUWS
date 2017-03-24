@@ -1,0 +1,85 @@
+id=GETID("3D Builder","ApplicationFrameWindow")
+//id=GETID("名前を付けて保存")
+//id=GETID("Slic3r")
+//id=GETID("Pronterface")
+
+print "===BTN==="
+for i = 0 to GetItem(id, ITM_BTN, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===LIST==="
+for i = 0 to GetItem(id, ITM_LIST, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===TAB==="
+for i = 0 to GetItem(id, ITM_TAB, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===MENU==="
+for i = 0 to GetItem(id, ITM_MENU, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===TREEVIEW==="
+for i = 0 to GetItem(id, ITM_TREEVIEW, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===LISTVIEW==="
+for i = 0 to GetItem(id, ITM_LISTVIEW, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===EDIT==="
+for i = 0 to GetItem(id, ITM_EDIT, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===STATIC==="
+for i = 0 to GetItem(id, ITM_STATIC, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===STATUSBAR==="
+for i = 0 to GetItem(id, ITM_STATUSBAR, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===TOOLBAR==="
+for i = 0 to GetItem(id, ITM_TOOLBAR, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===LINK==="
+for i = 0 to GetItem(id, ITM_LINK, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===ACCCLK==="
+for i = 0 to GetItem(id, ITM_ACCCLK, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===ACCCLK2==="
+for i = 0 to GetItem(id, ITM_ACCCLK2, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===ACCCLK2==="
+for i = 0 to GetItem(id, ITM_ACCCLK2, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===ACCTXT==="
+for i = 0 to GetItem(id, ITM_ACCTXT, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
+print "===ACCEDIT==="
+for i = 0 to GetItem(id, ITM_ACCEDIT, 1)-1
+　　print ALL_ITEM_LIST[i]
+next
+
